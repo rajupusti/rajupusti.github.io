@@ -32,11 +32,11 @@
 
 ### 🌟 Practice Projects
 -  **Get Image Text** — To get a tergeted text automatically with ApiGateway and Lamda Function  
-  [https://pustiraju.github.io/get-frame-no](https://pustiraju.github.io/get-frame-no)
+  [https://rajupusti.github.io/get-frame-no](https://rajupusti.github.io/get-frame-no)
 -  **Typing** — For typing practice  
-  [https://pustiraju.github.io/typing](https://pustiraju.github.io/typing)
+  [https://rajupusti.github.io/typing](https://rajupusti.github.io/typing)
 -  **Own links** — for my work only     
-  [https://pustiraju.github.io/work-links](https://pustiraju.github.io/work-links)
+  [https://rajupusti.github.io/work-links](https://rajupusti.github.io/work-links)
 
 ---
 
