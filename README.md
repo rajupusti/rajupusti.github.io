@@ -2,7 +2,7 @@
  <div align="center">
   <h1>👋 Hi, I’m Raju</h1>
   <a href="bio.pdf" download style="
-      display: inline-block;
+      display: flex;
       background-color: #2563eb;
       color: white;
       padding: 12px 25px;
