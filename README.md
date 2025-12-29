@@ -1,5 +1,5 @@
 <div align="center">
- <a href="Raju_Pusti_Profile.pdf" download>
+ <a href="Raju_Pusti_Profile.pdf" download> download </a>
  
   <h1>👋 Hi, I’m Raju </h1>
   <p>Building intuitive web apps, designing sleek, modern interfaces, and diving into innovative tech that sparks creativity and joy—bringing ideas to life with clean code, bold visuals, and seamless experiences.</p>
