@@ -1,7 +1,21 @@
 <div align="center">
- <a href="Raju_Pusti_Profile.pdf" download> download </a>
- 
-  <h1>👋 Hi, I’m Raju </h1>
+ <div align="center">
+  <h1>👋 Hi, I’m Raju</h1>
+  <a href="bio.pdf" download style="
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+  " onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'">
+    📄 DOWNLOAD PROFILE
+  </a>
+</div>
   <p>Building intuitive web apps, designing sleek, modern interfaces, and diving into innovative tech that sparks creativity and joy—bringing ideas to life with clean code, bold visuals, and seamless experiences.</p>
 </div>
 
