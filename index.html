@@ -4,60 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raju Pusti</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            primaryDark: '#1d4ed8',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>👋 Hi, I’m Raju</h1>
-      <a href="bio.pdf" download class="download-btn">
-        📄 DOWNLOAD RESUME
-      </a>
+<body class="bg-gray-100 text-gray-800 min-h-screen py-8">
+  <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden relative">
+    
+    <!-- Header -->
+    <div class="relative text-center py-12 px-8 bg-gradient-to-b from-blue-50 to-white">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-800">👋 Hi, I’m Raju</h1>
+
+      <!-- Down Arrow on the Right Side -->
+      <div class="absolute right-8 top-1/2 -translate-y-1/2 animate-bounce">
+        <a href="bio.pdf" download><svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg></a>
+        
+      </div>
     </div>
 
-    <p class="intro">
+    <!-- Intro -->
+    <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto px-8 mt-8">
       Building intuitive web apps, designing sleek, modern interfaces, and diving into innovative tech that sparks creativity and joy—bringing ideas to life with clean code, bold visuals, and seamless experiences.
     </p>
 
-    <h2>🚀 About Me</h2>
-    <ul>
-      <li>👀 <strong>Passionate about</strong>: Creating dynamic web apps.</li>
-      <li>🌱 <strong>Currently learning</strong>: Node.js, Express, Tailwind CSS.</li>
-      <li>💞️ <strong>Open to collaborate on</strong>: Open-source web projects.</li>
-      <li>📫 <strong>Reach me</strong>: rajupusti@yahoo.com</li>
-      <li>⚡ <strong>Fun fact</strong>: I once coded a website in a weekend inspired by a yoga session! 🧘‍♂️</li>
-    </ul>
-
-    <h2>🛠️ Tech Stack</h2>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript">
-      <img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat" alt="Node.js">
-      <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat" alt="HTML5">
-      <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat" alt="CSS3">
-      <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat" alt="Tailwind CSS">
+    <!-- About Me -->
+    <div class="px-8 py-12">
+      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🚀 About Me</h2>
+      <ul class="mt-8 space-y-4 text-lg">
+        <li>👀 <strong class="text-blue-700">Passionate about</strong>: Creating dynamic web apps.</li>
+        <li>🌱 <strong class="text-blue-700">Currently learning</strong>: Node.js, Express, Tailwind CSS.</li>
+        <li>💞️ <strong class="text-blue-700">Open to collaborate on</strong>: Open-source web projects.</li>
+        <li>📫 <strong class="text-blue-700">Reach me</strong>: rajupusti@yahoo.com</li>
+        <li>⚡ <strong class="text-blue-700">Fun fact</strong>: I once coded a website in a weekend inspired by a yoga session! 🧘‍♂️</li>
+      </ul>
     </div>
 
-    <h2>🌟 A static site with AWS Services like S3, Cloudfront, ACM and AppScript Web Endpoint</h2>
-    <ul class="project-list">
-      <li>🧘 <strong>Yoga Samadhan</strong> — Wellness platform for yoga and mindfulness<br>
-        <a href="https://yogasamadhan.com" target="_blank">https://yogasamadhan.com</a>
-      </li>
-    </ul>
+    <!-- Tech Stack -->
+    <div class="px-8 py-12 bg-gray-50">
+      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🛠️ Tech Stack</h2>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript">
+        <img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat" alt="Node.js">
+        <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat" alt="HTML5">
+        <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat" alt="CSS3">
+        <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat" alt="Tailwind CSS">
+      </div>
+    </div>
 
-    <h2>🌟 Practice Projects</h2>
-    <ul class="project-list">
-      <li><strong>Get Image Text</strong> — To get targeted text automatically with API Gateway and Lambda Function<br>
-        <a href="https://rajupusti.github.io/get-frame-no" target="_blank">https://rajupusti.github.io/get-frame-no</a>
-      </li>
-      <li><strong>Typing</strong> — For typing practice<br>
-        <a href="https://rajupusti.github.io/typing" target="_blank">https://rajupusti.github.io/typing</a>
-      </li>
-      <li><strong>Own links</strong> — For my work only<br>
-        <a href="https://rajupusti.github.io/work-links" target="_blank">https://rajupusti.github.io/work-links</a>
-      </li>
-    </ul>
+    <!-- Main Project -->
+    <div class="px-8 py-12">
+      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">
+        🌟 A static site with AWS Services (S3, CloudFront, ACM) and AppScript Web Endpoint
+      </h2>
+      <ul class="mt-8 space-y-6 text-lg">
+        <li>
+          🧘 <strong class="text-blue-700">Yoga Samadhan</strong> — Wellness platform for yoga and mindfulness<br>
+          <a href="https://yogasamadhan.com" target="_blank" class="text-primary hover:underline font-medium">
+            https://yogasamadhan.com
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Practice Projects -->
+    <div class="px-8 py-12 bg-gray-50">
+      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🌟 Practice Projects</h2>
+      <ul class="mt-8 space-y-6 text-lg">
+        <li>
+          <strong class="text-blue-700">Get Image Text</strong> — Extract targeted text automatically using API Gateway and Lambda Function<br>
+          <a href="https://rajupusti.github.io/get-frame-no" target="_blank" class="text-primary hover:underline font-medium">
+            https://rajupusti.github.io/get-frame-no
+          </a>
+        </li>
+        <li>
+          <strong class="text-blue-700">Typing</strong> — For typing practice<br>
+          <a href="https://rajupusti.github.io/typing" target="_blank" class="text-primary hover:underline font-medium">
+            https://rajupusti.github.io/typing
+          </a>
+        </li>
+        <li>
+          <strong class="text-blue-700">Own links</strong> — Personal work links<br>
+          <a href="https://rajupusti.github.io/work-links" target="_blank" class="text-primary hover:underline font-medium">
+            https://rajupusti.github.io/work-links
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
+  <!-- Optional JS -->
   <script src="script.js"></script>
 </body>
 </html>
