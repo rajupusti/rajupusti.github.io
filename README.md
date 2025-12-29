@@ -1,19 +1,21 @@
 <div align="center">
- <div align="center">
-  <h1>👋 Hi, I’m Raju</h1>
+ <div align="center" style="position: relative; display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+  <h1 style="margin: 0; font-size: 32px;">👋 Hi, I’m Raju</h1>
+  
   <a href="bio.pdf" download style="
-      display: flex;
-      background-color: #2563eb;
-      color: white;
-      padding: 12px 25px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 10px;
-      transition: background-color 0.3s;
+    position: absolute;
+    left: 40px;
+    background-color: #2563eb;
+    color: white;
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   " onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'">
-    📄 DOWNLOAD PROFILE
+    📄 DOWNLOAD RESUME
   </a>
 </div>
   <p>Building intuitive web apps, designing sleek, modern interfaces, and diving into innovative tech that sparks creativity and joy—bringing ideas to life with clean code, bold visuals, and seamless experiences.</p>
