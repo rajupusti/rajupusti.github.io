@@ -4,109 +4,218 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
-  <title>Raju Pusti</title>
-  <!-- Tailwind CSS CDN -->
+  <title>Raju Pusti — Terminal</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#2563eb',
-            primaryDark: '#1d4ed8',
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'JetBrains Mono', monospace; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .cursor { animation: blink 1s step-end infinite; }
+    @keyframes appear { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+    .l { opacity:0; animation: appear 0.2s ease forwards; }
+    .l:nth-child(1){animation-delay:.1s} .l:nth-child(2){animation-delay:.22s} .l:nth-child(3){animation-delay:.34s}
+    .l:nth-child(4){animation-delay:.46s} .l:nth-child(5){animation-delay:.58s} .l:nth-child(6){animation-delay:.7s}
+    .l:nth-child(7){animation-delay:.82s} .l:nth-child(8){animation-delay:.94s} .l:nth-child(9){animation-delay:1.06s}
+    .l:nth-child(10){animation-delay:1.18s} .l:nth-child(11){animation-delay:1.3s} .l:nth-child(12){animation-delay:1.42s}
+    .l:nth-child(13){animation-delay:1.54s} .l:nth-child(14){animation-delay:1.66s} .l:nth-child(15){animation-delay:1.78s}
+    .l:nth-child(16){animation-delay:1.9s} .l:nth-child(17){animation-delay:2.02s} .l:nth-child(18){animation-delay:2.14s}
+    .l:nth-child(19){animation-delay:2.26s} .l:nth-child(20){animation-delay:2.38s} .l:nth-child(21){animation-delay:2.5s}
+    .l:nth-child(22){animation-delay:2.62s} .l:nth-child(23){animation-delay:2.74s} .l:nth-child(24){animation-delay:2.86s}
+    .l:nth-child(25){animation-delay:2.98s} .l:nth-child(26){animation-delay:3.1s} .l:nth-child(27){animation-delay:3.22s}
+    .l:nth-child(28){animation-delay:3.34s} .l:nth-child(29){animation-delay:3.46s} .l:nth-child(30){animation-delay:3.58s}
+    .l:nth-child(31){animation-delay:3.7s} .l:nth-child(32){animation-delay:3.82s} .l:nth-child(33){animation-delay:3.94s}
+    .l:nth-child(34){animation-delay:4.06s} .l:nth-child(35){animation-delay:4.18s} .l:nth-child(36){animation-delay:4.3s}
+    .l:nth-child(37){animation-delay:4.42s} .l:nth-child(38){animation-delay:4.54s} .l:nth-child(39){animation-delay:4.66s}
+    .l:nth-child(40){animation-delay:4.78s} .l:nth-child(41){animation-delay:4.9s} .l:nth-child(42){animation-delay:5.02s}
+    .l:nth-child(43){animation-delay:5.14s} .l:nth-child(44){animation-delay:5.26s} .l:nth-child(45){animation-delay:5.38s}
+    .l:nth-child(46){animation-delay:5.5s} .l:nth-child(47){animation-delay:5.62s} .l:nth-child(48){animation-delay:5.74s}
+    .l:nth-child(49){animation-delay:5.86s} .l:nth-child(50){animation-delay:5.98s}
+    .l:nth-child(50){animation-delay:5.86s} .l:nth-child(50){animation-delay:5.98s}
+  </style>
 </head>
-<body class="bg-gray-900  min-h-screen py-8">
-  <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden relative">
-    
-    <!-- Header -->
-    <div class="relative py-10 px-8 md:px-20 bg-gradient-to-b from-blue-50 to-white">
-      <h1 class="text-4xl md:text-5xl font-bold text-slate-800">👋 Hi, I’m Raju</h1>
 
-      <!-- Down Arrow on the Right Side -->
-      <div class="absolute right-8 top-1/2 -translate-y-1/2 animate-bounce" onclick="alert('your ip')">
-        <a href="bio.pdf" class="pointer-events-none cursor-not-allowed"  download ><svg class="w-6 h-6  text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg></a>
-        
-      </div>
+<body class="bg-zinc-950 min-h-screen flex items-start justify-center p-4 md:p-10">
+
+  <!-- Terminal Window -->
+  <div class="w-full max-w-3xl rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+
+    <!-- Title Bar -->
+    <div class="bg-zinc-800 px-5 py-3 flex items-center gap-2">
+      <span class="w-3.5 h-3.5 rounded-full bg-red-500"></span>
+      <span class="w-3.5 h-3.5 rounded-full bg-yellow-400"></span>
+      <span class="w-3.5 h-3.5 rounded-full bg-green-500"></span>
+      <span class="flex-1 text-center text-xs text-zinc-500 tracking-widest">HI i am raju</span>
+      <a href="bio.pdf" download class="text-xs text-zinc-500 hover:text-green-400 transition-colors">⬇ bio.pdf</a>
     </div>
 
-    <!-- Intro -->
-    <p class="text-center text-lg text-blue-600 max-w-3xl mx-auto px-3 mt-2">
-      Building intuitive web apps, designing sleek, modern interfaces, and diving into innovative tech that sparks creativity and joy—bringing ideas to life with clean code, bold visuals, and seamless experiences.
-    </p>
+    <!-- Body -->
+    <div class="bg-[#0d1117] px-6 md:px-10 py-8 text-sm text-zinc-300 space-y-1">
 
-    <!-- About Me -->
-    <div class="px-8 py-10">
-      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🚀 About Me</h2>
-      <ul class="mt-8 space-y-4 text-lg">
-        <li>👀 <strong class="text-blue-700">Passionate about</strong>: Creating dynamic web apps.</li>
-        <li>🌱 <strong class="text-blue-700">Currently learning</strong>: Node.js, Express, Tailwind CSS.</li>
-        <li>💞️ <strong class="text-blue-700">Open to collaborate on</strong>: Open-source web projects.</li>
-        <li>📫 <strong class="text-blue-700">Reach me</strong>: rajupusti@yahoo.com</li>
-        <li>⚡ <strong class="text-blue-700">Fun fact</strong>: I once coded a website in a weekend inspired by a yoga session! 🧘‍♂️</li>
-      </ul>
-    </div>
+      <!-- Banner -->
+      <p class="l text-zinc-600">╔══════════════════════════════════════════════════╗</p>
+      <p class="l text-zinc-600">║  <span class="text-green-400 font-bold">  RAJU PUSTI · PORTFOLIO · v1.0.0  </span>            ║</p>
+      <p class="l text-zinc-600">║  <span class="text-zinc-500 text-xs">  Building the web, one commit at a time</span>        ║</p>
+      <p class="l text-zinc-600">╚══════════════════════════════════════════════════╝</p>
 
-    <!-- Tech Stack -->
-    <div class="px-8 py-12 bg-gray-50">
-      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🛠️ Tech Stack</h2>
-      <div class="flex flex-wrap gap-4 mt-8">
-        <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript">
-        <img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat" alt="Node.js">
-        <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat" alt="HTML5">
-        <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat" alt="CSS3">
-        <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat" alt="Tailwind CSS">
-      </div>
-    </div>
+      <p class="l">&nbsp;</p>
 
-    <!-- Main Project -->
-    <div class="px-8 py-12">
-      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">
-        🌟 A static site with AWS Services (S3, CloudFront, ACM) and AppScript Web Endpoint
-      </h2>
-      <ul class="mt-8 space-y-6 text-lg">
-        <li>
-          🧘 <strong class="text-blue-700">Yoga Samadhan</strong> — Wellness platform for yoga and mindfulness<br>
-          <a href="https://yogasamadhan.com" target="_blank" class="text-primary hover:underline font-medium">
-            https://yogasamadhan.com
-          </a>
-        </li>
-      </ul>
-    </div>
+      <!-- whoami -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">#whoami</span>
+      </p>
+      <p class="l text-amber-300 pl-2">
+        ❯ Building intuitive web apps, designing sleek modern interfaces,<br>
+        <span class="pl-4">and bringing ideas to life with clean code &amp; bold visuals.</span>
+      </p>
 
-    <!-- Practice Projects -->
-    <div class="px-8 py-12 bg-gray-50">
-      <h2 class="text-3xl font-semibold text-slate-800 border-b-4 border-blue-200 pb-3 inline-block">🌟 Practice Projects</h2>
-      <ul class="mt-8 space-y-6 text-lg">
-        <li>
-          <strong class="text-blue-700">Get Image Text</strong> — Extract targeted text automatically using API Gateway and Lambda Function<br>
-          <a href="https://rajupusti.github.io/get-frame-no" target="_blank" class="text-primary hover:underline font-medium">
-            https://rajupusti.github.io/get-frame-no
-          </a>
-        </li>
-        <li>
-          <strong class="text-blue-700">Typing</strong> — For typing practice<br>
-          <a href="https://rajupusti.github.io/typing" target="_blank" class="text-primary hover:underline font-medium">
-            https://rajupusti.github.io/typing
-          </a>
-        </li>
-        <li>
-          <strong class="text-blue-700">Own links</strong> — Personal work links<br>
-          <a href="https://rajupusti.github.io/work-links" target="_blank" class="text-primary hover:underline font-medium">
-            https://rajupusti.github.io/work-links
-          </a>
-        </li>
-      </ul>
+      <p class="l">&nbsp;</p>
+
+      <!-- cat about.json -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">cat </span><span class="text-purple-400">about.json</span>
+      </p>
+      <p class="l text-zinc-600 pl-2">{</p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"passion"</span><span class="text-zinc-600">: </span>
+        <span class="text-amber-300">"Creating dynamic web apps"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"learning"</span><span class="text-zinc-600">: </span>
+        <span class="text-green-400">["Node.js", "Express", "Tailwind CSS"]</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"openTo"</span><span class="text-zinc-600">: </span>
+        <span class="text-amber-300">"Open-source web projects"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"email"</span><span class="text-zinc-600">: </span>
+        <span class="text-blue-300">"rajupusti@yahoo.com"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"funFact"</span><span class="text-zinc-600">: </span>
+        <span class="text-pink-300 italic">"Coded a site in a weekend after yoga 🧘‍♂️"</span>
+      </p>
+      <p class="l text-zinc-600 pl-2">}</p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- ls stack -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">ls </span><span class="text-purple-400">tech-stack/</span>
+      </p>
+      <p class="l pl-2 flex flex-wrap gap-x-6 gap-y-1">
+        <span class="text-yellow-300">JavaScript</span>
+        <span class="text-green-400">Node.js</span>
+        <span class="text-orange-400">HTML5</span>
+        <span class="text-blue-400">CSS3</span>
+        <span class="text-cyan-400">Tailwind CSS</span>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- cat main-project -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">cat </span><span class="text-purple-400">main-project.md</span>
+      </p>
+      <p class="l pl-2 text-amber-400 font-bold">## AWS Static Site (S3 · CloudFront · ACM · AppScript)</p>
+      <p class="l pl-2">
+        <span class="text-zinc-400">🧘 </span>
+        <span class="text-white font-semibold">Yoga Samadhan</span>
+        <span class="text-zinc-500"> — Wellness platform for yoga and mindfulness</span>
+      </p>
+      <p class="l pl-4">
+        <span class="text-zinc-600">↳ </span>
+        <a href="https://yogasamadhan.com" target="_blank" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
+          https://yogasamadhan.com
+        </a>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- ls projects -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">ls </span><span class="text-purple-400">practice-projects/</span>
+      </p>
+
+      <p class="l pl-2 text-zinc-500">── <span class="text-white font-semibold">get-image-text</span>
+        <span class="text-zinc-600"> · Extract text via API Gateway + Lambda</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-zinc-600">↳ </span>
+        <a href="https://rajupusti.github.io/get-frame-no" target="_blank" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
+          rajupusti.github.io/get-frame-no
+        </a>
+      </p>
+
+      <p class="l pl-2 text-zinc-500">── <span class="text-white font-semibold">typing-practice</span>
+        <span class="text-zinc-600"> · Speed &amp; accuracy trainer</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-zinc-600">↳ </span>
+        <a href="https://rajupusti.github.io/typing" target="_blank" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
+          rajupusti.github.io/typing
+        </a>
+      </p>
+
+      <p class="l pl-2 text-zinc-500">── <span class="text-white font-semibold">own-links</span>
+        <span class="text-zinc-600"> · Personal work links hub</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-zinc-600">↳ </span>
+        <a href="https://rajupusti.github.io/work-links" target="_blank" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
+          rajupusti.github.io/work-links
+        </a>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- success -->
+      <p class="l text-green-500">✔ <span class="text-zinc-400">All systems loaded.</span> <span class="text-zinc-600">(0 errors · 0 warnings)</span></p>
+
+      <p class="l">&nbsp;</p>
+      <!-- Input Bar -->
+<div class="l flex items-center gap-2 px-6 md:px-10 py-4 bg-[#0d1117]">
+  <span class="text-green-400 text-sm shrink-0">raju</span>
+  <span class="text-zinc-600 text-sm shrink-0">@</span>
+  <span class="text-blue-400 text-sm shrink-0">portfolio</span>
+  <span class="text-zinc-600 text-sm shrink-0"> ~</span>
+
+  <input
+    id="cmd-input"
+    type="text"
+    placeholder="type your message"
+    autocomplete="off"
+    spellcheck="false"
+    class="flex-1 bg-transparent text-sm text-zinc-100 outline-none caret-green-400 min-w-0 placeholder-zinc-700"
+  />
+
+  <button
+    id="cmd-send"
+    class="shrink-0 bg-green-500 hover:bg-green-400 active:scale-95 text-black text-xs font-bold px-4 py-2 rounded-lg transition-all"
+  >
+    SEND ↵
+  </button>
+</div>
+
+      <!-- final prompt with cursor -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="cursor inline-block w-2.5 h-[1.1em] bg-green-400 align-middle"></span>
+      </p>
+
     </div>
   </div>
 
-  <!-- Optional JS -->
-  <script src="script.js"></script>
 </body>
 </html>
