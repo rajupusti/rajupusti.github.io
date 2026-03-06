@@ -1,6 +1,10 @@
 document.getElementById("cmd-send").addEventListener("click", function() {
     let inputElement = document.getElementById("cmd-input");
     let data = inputElement.value;
+    if (data.trim() === "") {
+       inputElement.placeholder = "please enter a message";
+        return;
+    }
     console.log(typeof(data));
     const url = "https://script.google.com/macros/s/AKfycbx7DcyopCwKC4TUiG0LqU4mDZpyNrEUdBdaJYHlOgxRlG2YMByoT6vcCDa1nJyuf702/exec"
 
