@@ -18,11 +18,14 @@ document.getElementById("cmd-send").addEventListener("click", function() {
     })
    
     .then(result => {
-        console.log("Message sent successfully:", result.status);
-        //result is a object and result.status is 200
+    console.log("Message sent successfully:", result.status);
+
+    if (result.status === 200) {
         inputElement.value = "";
-        
-    })
+
+        window.location.href = "tel:+919635848414";
+    }
+})
     .catch(error => {
         console.error("Error sending command:", error);
     });
