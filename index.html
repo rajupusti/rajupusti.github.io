@@ -39,8 +39,8 @@
         <a href="#about" class="text-slate-400 hover:text-cyan-400 transition">About</a>
         <a href="#skills" class="text-slate-400 hover:text-cyan-400 transition">Skills</a>
         <a href="#project" class="text-slate-400 hover:text-cyan-400 transition">Project</a>
-        <a href="mailto:rajupusti@yahoo.com" class="px-4 py-2 text-xs font-medium rounded-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition shadow-inner">
-          Get in Touch
+        <a href="#contact" class="px-4 py-2 text-xs font-medium rounded-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition shadow-inner">
+          Contact Me
         </a>
       </div>
     </div>
@@ -64,8 +64,8 @@
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 pt-4">
-        <a href="#project" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-bold hover:opacity-95 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
-          View Featured Project <i class="fa-solid fa-arrow-down text-xs"></i>
+        <a href="#contact" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-bold hover:opacity-95 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+          Send Message <i class="fa-solid fa-paper-plane text-xs"></i>
         </a>
         <a href="mailto:rajupusti@yahoo.com" class="px-7 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800/80 text-slate-200 border border-slate-800 backdrop-blur-md transition">
           rajupusti@yahoo.com
@@ -180,12 +180,95 @@
       </div>
     </section>
 
+    <!-- NEW: Contact Form Section -->
+    <section id="contact" class="space-y-6 max-w-2xl mx-auto">
+      <div class="text-center space-y-2">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400">// Get In Touch</h2>
+        <p class="text-2xl font-bold text-white">Send A Message</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-xl shadow-2xl relative">
+        <form id="contact-form" onsubmit="handleSend(event)" class="space-y-5">
+          <div>
+            <label for="email-input" class="block text-xs font-mono text-slate-400 mb-2">YOUR EMAIL ADDRESS</label>
+            <input 
+              type="email" 
+              id="email-input" 
+              required
+              placeholder="name@example.com"
+              class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500/80 focus:ring-1 focus:ring-cyan-500/80 text-sm font-sans transition"
+            />
+          </div>
+
+          <div>
+            <label for="message-input" class="block text-xs font-mono text-slate-400 mb-2">YOUR MESSAGE</label>
+            <textarea 
+              id="message-input" 
+              rows="4" 
+              required
+              placeholder="Hey Raju, let's collaborate on a project..."
+              class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500/80 focus:ring-1 focus:ring-cyan-500/80 text-sm font-sans transition resize-none"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            id="send-btn"
+            class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-bold hover:opacity-95 transition shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 group cursor-pointer"
+          >
+            <span id="btn-text">Send Message</span>
+            <i id="btn-icon" class="fa-solid fa-paper-plane text-xs group-hover:translate-x-1 transition-transform"></i>
+          </button>
+        </form>
+
+        <!-- Success Toast Notification -->
+        <div id="success-message" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono text-center items-center justify-center gap-2">
+          <i class="fa-solid fa-circle-check text-sm"></i> Message sent successfully! I'll get back to you soon.
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="border-t border-slate-900 bg-[#080b12] py-8 text-center text-xs text-slate-500">
     <p>© Raju Pusti — Built with clean code & Tailwind CSS</p>
   </footer>
+
+  <script>
+    function handleSend(event) {
+      event.preventDefault();
+      const btn = document.getElementById('send-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const successMsg = document.getElementById('success-message');
+      
+      // Loading State
+      btnText.innerText = 'Sending...';
+      btnIcon.className = 'fa-solid fa-spinner animate-spin text-xs';
+      btn.disabled = true;
+
+      // Simulated network request delay
+      setTimeout(() => {
+        btnText.innerText = 'Sent!';
+        btnIcon.className = 'fa-solid fa-check text-xs';
+        btn.className = 'w-full py-3.5 px-6 rounded-xl bg-emerald-500 text-slate-950 font-bold transition flex items-center justify-center gap-2';
+        
+        successMsg.classList.remove('hidden');
+        successMsg.classList.add('flex');
+
+        // Reset form
+        document.getElementById('contact-form').reset();
+
+        setTimeout(() => {
+          btnText.innerText = 'Send Message';
+          btnIcon.className = 'fa-solid fa-paper-plane text-xs group-hover:translate-x-1 transition-transform';
+          btn.className = 'w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 text-slate-950 font-bold hover:opacity-95 transition shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 group cursor-pointer';
+          btn.disabled = false;
+        }, 3000);
+      }, 1000);
+    }
+  </script>
 
 </body>
 </html>
