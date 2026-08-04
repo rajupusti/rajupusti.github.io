@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+  <title>Raju Pusti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .l {
+      opacity: 0;
+      animation: appear 0.2s ease forwards;
+    }
+
+    .l:nth-child(1) {
+      animation-delay: .1s
+    }
+
+    .l:nth-child(2) {
+      animation-delay: .22s
+    }
+
+    .l:nth-child(3) {
+      animation-delay: .34s
+    }
+
+    .l:nth-child(4) {
+      animation-delay: .46s
+    }
+
+    .l:nth-child(5) {
+      animation-delay: .58s
+    }
+
+    .l:nth-child(6) {
+      animation-delay: .7s
+    }
+
+    .l:nth-child(7) {
+      animation-delay: .82s
+    }
+
+    .l:nth-child(8) {
+      animation-delay: .94s
+    }
+
+    .l:nth-child(9) {
+      animation-delay: 1.06s
+    }
+
+    .l:nth-child(10) {
+      animation-delay: 1.18s
+    }
+
+    .l:nth-child(11) {
+      animation-delay: 1.3s
+    }
+
+    .l:nth-child(12) {
+      animation-delay: 1.42s
+    }
+
+    .l:nth-child(13) {
+      animation-delay: 1.54s
+    }
+
+    .l:nth-child(14) {
+      animation-delay: 1.66s
+    }
+
+    .l:nth-child(15) {
+      animation-delay: 1.78s
+    }
+
+    .l:nth-child(16) {
+      animation-delay: 1.9s
+    }
+
+    .l:nth-child(17) {
+      animation-delay: 2.02s
+    }
+
+    .l:nth-child(18) {
+      animation-delay: 2.14s
+    }
+
+    .l:nth-child(19) {
+      animation-delay: 2.26s
+    }
+
+    .l:nth-child(20) {
+      animation-delay: 2.38s
+    }
+
+    .l:nth-child(21) {
+      animation-delay: 2.5s
+    }
+
+    .l:nth-child(22) {
+      animation-delay: 2.62s
+    }
+
+    .l:nth-child(23) {
+      animation-delay: 2.74s
+    }
+
+    .l:nth-child(24) {
+      animation-delay: 2.86s
+    }
+
+    .l:nth-child(25) {
+      animation-delay: 2.98s
+    }
+
+    .l:nth-child(26) {
+      animation-delay: 3.1s
+    }
+
+    .l:nth-child(27) {
+      animation-delay: 3.22s
+    }
+
+    .l:nth-child(28) {
+      animation-delay: 3.34s
+    }
+
+    .l:nth-child(29) {
+      animation-delay: 3.46s
+    }
+
+    .l:nth-child(30) {
+      animation-delay: 3.58s
+    }
+
+    .l:nth-child(31) {
+      animation-delay: 3.7s
+    }
+
+    .l:nth-child(32) {
+      animation-delay: 3.82s
+    }
+
+    .l:nth-child(33) {
+      animation-delay: 3.94s
+    }
+
+    .l:nth-child(34) {
+      animation-delay: 4.06s
+    }
+
+    .l:nth-child(35) {
+      animation-delay: 4.18s
+    }
+
+    .l:nth-child(36) {
+      animation-delay: 4.3s
+    }
+
+    .l:nth-child(37) {
+      animation-delay: 4.42s
+    }
+
+    .l:nth-child(38) {
+      animation-delay: 4.54s
+    }
+
+    .l:nth-child(39) {
+      animation-delay: 4.66s
+    }
+
+    .l:nth-child(40) {
+      animation-delay: 4.78s
+    }
+
+    .l:nth-child(41) {
+      animation-delay: 4.9s
+    }
+
+    .l:nth-child(42) {
+      animation-delay: 5.02s
+    }
+
+    .l:nth-child(43) {
+      animation-delay: 5.14s
+    }
+
+    .l:nth-child(44) {
+      animation-delay: 5.26s
+    }
+
+    .l:nth-child(45) {
+      animation-delay: 5.38s
+    }
+
+    .l:nth-child(46) {
+      animation-delay: 5.5s
+    }
+
+    .l:nth-child(47) {
+      animation-delay: 5.62s
+    }
+
+    .l:nth-child(48) {
+      animation-delay: 5.74s
+    }
+
+    .l:nth-child(49) {
+      animation-delay: 5.86s
+    }
+
+    .l:nth-child(50) {
+      animation-delay: 5.98s
+    }
+
+    .l:nth-child(50) {
+      animation-delay: 5.86s
+    }
+
+    .l:nth-child(50) {
+      animation-delay: 5.98s
+    }
+  </style>
+</head>
+
+<body class="bg-zinc-950 min-h-screen flex items-start justify-center p-4 md:p-10">
+
+  <!-- Terminal Window -->
+  <div class="w-full max-w-3xl rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+
+    <!-- Title Bar -->
+    <div class="bg-zinc-800 px-5 py-3 flex items-center gap-2">
+      <span class="w-3.5 h-3.5 rounded-full bg-red-500"></span>
+      <span class="w-3.5 h-3.5 rounded-full bg-yellow-400"></span>
+      <span class="w-3.5 h-3.5 rounded-full bg-green-500"></span>
+      <span class="flex-1 text-center text-xs text-zinc-500 tracking-widest">HI i am raju</span>
+      <a href="bio1.pdf"  class="text-xs text-zinc-500 hover:text-green-400 transition-colors">⬇ bio.pdf</a>
+    </div>
+
+    <!-- Body -->
+    <div class="bg-[#0d1117] px-6 md:px-10 py-8 text-sm text-zinc-300 space-y-1">
+
+      <!-- Banner -->
+      <p class="l text-zinc-600">╔══════════════════════════════════════════════════╗</p>
+      <p class="l text-zinc-600">║ <span class="text-green-400 font-bold"> RAJU PUSTI · PORTFOLIO · v1.0.0 </span> ║</p>
+      <p class="l text-zinc-600">║ <span class="text-zinc-500 text-xs"> Building the web, one commit at a time</span> ║
+      </p>
+      <p class="l text-zinc-600">╚══════════════════════════════════════════════════╝</p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- whoami -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span
+          class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">#whoami</span>
+      </p>
+      <p class="l text-amber-300 pl-2">
+        ❯ Building intuitive web apps, designing sleek modern interfaces,<br>
+        <span class="pl-4">and bringing ideas to life with clean code &amp; bold visuals.</span>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- cat about.json -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span
+          class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">cat </span><span class="text-purple-400">about.json</span>
+      </p>
+      <p class="l text-zinc-600 pl-2">{</p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"passion"</span><span class="text-zinc-600">: </span>
+        <span class="text-amber-300">"Creating dynamic web apps"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"learning"</span><span class="text-zinc-600">: </span>
+        <span class="text-green-400">["Node.js", "Express", "Tailwind CSS"]</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"openTo"</span><span class="text-zinc-600">: </span>
+        <span class="text-amber-300">"Open-source web projects"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"email"</span><span class="text-zinc-600">: </span>
+        <span class="text-blue-300">"rajupusti@yahoo.com"</span><span class="text-zinc-600">,</span>
+      </p>
+      <p class="l pl-6">
+        <span class="text-sky-400">"funFact"</span><span class="text-zinc-600">: </span>
+        <span class="text-pink-300 italic">"Coded a site in a weekend after yoga 🧘‍♂️"</span>
+      </p>
+      <p class="l text-zinc-600 pl-2">}</p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- ls stack -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span
+          class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">ls </span><span class="text-purple-400">tech-stack/</span>
+      </p>
+      <p class="l pl-2 flex flex-wrap gap-x-6 gap-y-1">
+        <span class="text-yellow-300">JavaScript</span>
+        <span class="text-green-400">Node.js</span>
+        <span class="text-orange-400">HTML5</span>
+        <span class="text-blue-400">CSS3</span>
+        <span class="text-cyan-400">Tailwind CSS</span>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- cat main-project -->
+      <p class="l">
+        <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span
+          class="text-blue-400">portfolio</span>
+        <span class="text-zinc-600"> ~ </span>
+        <span class="text-white">cat </span><span class="text-purple-400">main-project.md</span>
+      </p>
+      <p class="l pl-2 text-amber-400 font-bold">## AWS Static Site (S3 · CloudFront · ACM · AppScript)</p>
+      <p class="l pl-2">
+        <span class="text-zinc-400">🧘 </span>
+        <span class="text-white font-semibold">Yoga Samadhan</span>
+        <span class="text-zinc-500"> — Wellness platform for yoga and mindfulness</span>
+      </p>
+      <p class="l pl-4">
+        <span class="text-zinc-600">↳ </span>
+        <a href="https://yogasamadhan.com" target="_blank"
+          class="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
+          https://yogasamadhan.com
+        </a>
+      </p>
+
+      <p class="l">&nbsp;</p>
+
+      <!-- ls projects -->
+     
+      
+
+      <p class="l">&nbsp;</p>
+
+      <!-- success -->
+      <p class="l text-green-500">✔ <span class="text-zinc-400">All systems loaded.</span> <span
+          class="text-zinc-600">(0 errors · 0 warnings)</span></p>
+
+
+    </div>
+
+    <!-- final prompt with cursor -->
+     <div>
+    <p class="l px-5 py-1 bg-zinc-800">
+      <span class="text-green-400">raju</span><span class="text-zinc-600">@</span><span
+        class="text-blue-400">portfolio</span>
+      <span class="text-zinc-600"> ~ </span>
+      
+      <input id="cmd-input" type="text" placeholder="type your message" 
+      class="flex-1 bg-transparent text-sm text-zinc-100 outline-none caret-green-400 min-w-4 placeholder-zinc-700" />
+
+      <button id="cmd-send"
+        class="shrink-0 bg-green-500 hover:bg-green-400 active:scale-95 text-black text-xs font-bold px-3 py-2 ml-6  rounded-lg transition-all">
+        SEND ↵
+      </button>
+  </p>
+</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
