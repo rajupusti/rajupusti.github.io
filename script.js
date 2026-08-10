@@ -13,7 +13,7 @@ document.getElementById("send-btn").addEventListener("click", function() {
         headers: {
         "Content-Type": "application/x-www-form-urlencoded"
   },
-        body: data,
+        body: JSON.stringify(data);
         cors: "no-cors"
     })
    
