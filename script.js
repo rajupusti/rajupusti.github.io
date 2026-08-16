@@ -22,7 +22,6 @@ document.getElementById("send-btn").addEventListener("click", function() {
 
     if (result.status === 200) {
         inputElement.value = "";
-
         window.location.href = "tel:+919635848414";
     }
  })
